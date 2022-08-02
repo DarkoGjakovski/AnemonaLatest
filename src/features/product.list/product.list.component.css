@@ -2,9 +2,13 @@
     margin-top: 60px;
     padding-left: 60px;
     padding-right: 60px;
-    height: 100%;
+    height: fit-content;
     width: 100%;
     background-color: #ffffff;
+}
+
+.fill{
+  height: 100%;
 }
 
 .filters{

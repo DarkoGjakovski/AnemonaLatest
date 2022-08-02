@@ -11,7 +11,7 @@ import { ProductService } from 'src/services/product.service';
 })
 export class FavoritesComponent implements OnInit {
 
-  products: BehaviorSubject<Product[]> = new BehaviorSubject([new Product()]);
+  products: BehaviorSubject<Product[]> = new BehaviorSubject([]);
   bannerTitle: BehaviorSubject<string> = new BehaviorSubject("");
   numberOfPages: number = 1;
   pageNumber: number = 1;

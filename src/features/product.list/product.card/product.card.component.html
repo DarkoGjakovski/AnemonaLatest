@@ -7,11 +7,16 @@
     
     <div class="flexbox">
       <div class="card-body">
-        <h3 class="card-title">{{product?.title}}</h3>
+        <h3 class="card-title mb-1">{{product?.title}}</h3>
+        
+        <div class="textIcon">
+          <h5 class="mb-1">Залиха:</h5> <mat-icon *ngIf="product.available" [ngStyle]="{'color':'green'}" class="smallIcon mb-1">done</mat-icon> <mat-icon *ngIf="!product.available" [ngStyle]="{'color':'red'}" class="smallIcon mb-1">clear</mat-icon>
+        </div>
+        
         <p class="card-text">{{product?.price}}ден.</p>
       </div>
       <div class="card-buttons">
-          <span title="Додадете во кошничка" *ngIf="!isInCart.value" class="cart material-icons-outlined" (click)="addToCart()"  [ngStyle]="{'color':'rgb(107 84 168)'}">add_shopping_cart</span>
+          <span title="Додадете во кошничка" [class.disabled]="!product.available" *ngIf="!isInCart.value" class="cart material-icons-outlined" (click)="addToCart()"  [ngStyle]="{'color':'rgb(107 84 168)'}">add_shopping_cart</span>
           <span title="Отстранете од кошничка" *ngIf="isInCart.value" class="cart material-icons-outlined" (click)="removeFromCart()"  [ngStyle]="{'color':'rgb(107 84 168)'}">remove_shopping_cart</span>
       </div>
     </div>

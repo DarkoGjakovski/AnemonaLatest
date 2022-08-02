@@ -16,21 +16,21 @@ export class ProductService{
     }
 
     products: Product[] = [
-        new Product(1,'assets/cactus.jpg','Кактус','Цвеќе со боцки в пустина',150),
-        new Product(2,'assets/ficus.jpg','Фикус','Фикусче',200),
-        new Product(3,'assets/flower.jpg','Бонбончиња','Како шо не ми донесе Стефан',300),
-        new Product(4,'assets/hibiskus.jpg','Хибискус','Не знам шо е то',100),
-        new Product(5,'assets/rose.jpg','Роза','Црвена',500),
-        new Product(6,'assets/cactus.jpg','Кактус','Цвеќе со боцки в пустина',150),
-        new Product(7,'assets/ficus.jpg','Фикус','Фикусче',200),
-        new Product(8,'assets/flower.jpg','Бонбончиња','Како шо не ми донесе Стефан',300),
-        new Product(9,'assets/hibiskus.jpg','Хибискус','Не знам шо е то',100),
-        new Product(10,'assets/rose.jpg','Роза','Црвена',500),
-        new Product(11,'assets/cactus.jpg','Кактус','Цвеќе со боцки в пустина',150),
-        new Product(12,'assets/ficus.jpg','Фикус','Фикусче',200),
-        new Product(13,'assets/flower.jpg','Бонбончиња','Како шо не ми донесе Стефан',300),
-        new Product(14,'assets/hibiskus.jpg','Хибискус','Не знам шо е то',100),
-        new Product(15,'assets/rose.jpg','Роза','Црвена',500)
+        new Product(1,'assets/cactus.jpg','Кактус','Цвеќе со боцки в пустина',true,150),
+        new Product(2,'assets/ficus.jpg','Фикус','Фикусче',true,200),
+        new Product(3,'assets/flower.jpg','Бонбончиња','Како шо не ми донесе Стефан',false,300),
+        new Product(4,'assets/hibiskus.jpg','Хибискус','Не знам шо е то',true,100),
+        new Product(5,'assets/rose.jpg','Роза','Црвена',true,500),
+        new Product(6,'assets/cactus.jpg','Кактус','Цвеќе со боцки в пустина',true,150),
+        new Product(7,'assets/ficus.jpg','Фикус','Фикусче',true,200),
+        new Product(8,'assets/flower.jpg','Бонбончиња','Како шо не ми донесе Стефан',true,300),
+        new Product(9,'assets/hibiskus.jpg','Хибискус','Не знам шо е то',true,100),
+        new Product(10,'assets/rose.jpg','Роза','Црвена',true,500),
+        new Product(11,'assets/cactus.jpg','Кактус','Цвеќе со боцки в пустина',true,150),
+        new Product(12,'assets/ficus.jpg','Фикус','Фикусче',false,200),
+        new Product(13,'assets/flower.jpg','Бонбончиња','Како шо не ми донесе Стефан',true,300),
+        new Product(14,'assets/hibiskus.jpg','Хибискус','Не знам шо е то',true,100),
+        new Product(15,'assets/rose.jpg','Роза','Црвена',true,500)
       ]
 
       addProductToShoppingCart(id: number){

@@ -21,6 +21,21 @@
   align-items: center;
 }
 
+.textIcon{
+  display: flex;
+}
+
+.disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.smallIcon{
+  font-size: 14px;
+  margin-top: 3px;
+  margin-left: 2px;
+}
+
 mat-icon{
   font-size: 30px;
   margin-right: 20px;

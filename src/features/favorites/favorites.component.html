@@ -3,9 +3,15 @@
         <h1 class="title">Омилени производи:</h1>
     </div>
     <br>
+    <ng-template [ngIf]="(products | async).length == 0">
+        <div class="emptyCard">
+            <h1>Немате омилени производи!</h1>
+        </div>
+    </ng-template> 
     <div class="row">
         <div class="grid">  
             <app-productCard *ngFor="let product of products | async" [product]="product"></app-productCard >
         </div>
     </div>
 </div>
+

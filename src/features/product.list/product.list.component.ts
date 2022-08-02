@@ -66,7 +66,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
         this.loaderService.display(false)
       })
     },
-    2500);
+    1000);
   }
 
 }
