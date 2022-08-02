@@ -4,23 +4,17 @@
     </div> 
 </section> -->
 <div class="wrapper">
-    
     <div class="row">
-
         <div class="col-lg-2">
             <app-filtercard></app-filtercard>
         </div>
-
         <div class="col-lg-10">
             <div class="grid">  
                 <app-productCard *ngFor="let product of slicedList() | async" [product]="product"></app-productCard >
             </div>  
         </div>
-
     </div>
-
      <div class="paginator">
-
         <nav aria-label="...">
             <ul class="pagination justify-content-end">
                 <li *ngFor='let in of counter(numberOfPages) ;let i = index'>
@@ -28,7 +22,5 @@
                 </li>
             </ul>  
           </nav>
-
     </div>
 </div>
-<app-footer></app-footer>

@@ -31,6 +31,7 @@ import {MatMenuModule} from '@angular/material/menu'
 import {MatButtonModule} from '@angular/material/button'
 import {MatTabsModule} from '@angular/material/tabs'
 import {MatSidenavModule} from '@angular/material/sidenav'
+import { OverlayPageComponent } from 'src/features/overlay-page/overlay-page.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import {MatSidenavModule} from '@angular/material/sidenav'
     productCardComponent,
     FooterComponent,
     ShoppingCartProductComponent,
-    FavoritesComponent
+    FavoritesComponent,
+    OverlayPageComponent
   ],
   imports: [
     BrowserModule,
