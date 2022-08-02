@@ -1,6 +1,6 @@
 import { EventEmitter, Injectable } from "@angular/core";
 import { MatSnackBar } from "@angular/material/snack-bar";
-import { BehaviorSubject } from "rxjs";
+import { BehaviorSubject, Observable, of } from "rxjs";
 import { Product } from "src/models/product";
 import { ShoppingCartProduct } from "src/models/shoppingCartProduct";
 
@@ -176,7 +176,9 @@ export class ProductService{
         return price
       }
     
-      getProducts(){
-          return this.products.slice()
+      getProducts(): Observable<Product[]> {
+        return of(this.products.slice())
       }
+
+      
 }

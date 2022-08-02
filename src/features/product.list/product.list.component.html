@@ -1,12 +1,7 @@
-<!-- <section class="section-pagetop bg">
-    <div class="container">
-        <h2 class="title-page">{{bannerTitle.value}}</h2>
-    </div> 
-</section> -->
 <div class="wrapper">
     <div class="row">
         <div class="col-lg-2">
-            <app-filtercard></app-filtercard>
+            <app-filtercard *ngIf="!loaderService.status.value"></app-filtercard>
         </div>
         <div class="col-lg-10">
             <div class="grid">  

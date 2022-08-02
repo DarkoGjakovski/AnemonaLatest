@@ -32,6 +32,9 @@ import {MatButtonModule} from '@angular/material/button'
 import {MatTabsModule} from '@angular/material/tabs'
 import {MatSidenavModule} from '@angular/material/sidenav'
 import { OverlayPageComponent } from 'src/features/overlay-page/overlay-page.component';
+import { LoaderService } from 'src/shared/services/loader.service';
+import { LoaderComponent } from 'src/shared/loader/loader.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 @NgModule({
@@ -46,7 +49,8 @@ import { OverlayPageComponent } from 'src/features/overlay-page/overlay-page.com
     FooterComponent,
     ShoppingCartProductComponent,
     FavoritesComponent,
-    OverlayPageComponent
+    OverlayPageComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
@@ -67,9 +71,10 @@ import { OverlayPageComponent } from 'src/features/overlay-page/overlay-page.com
     MatMenuModule,
     MatButtonModule,
     MatSidenavModule,
-    MatTabsModule
+    MatTabsModule,
+    MatProgressSpinnerModule
   ],
-  providers: [ProductService, ShoppingCartService],
+  providers: [ProductService, ShoppingCartService, LoaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

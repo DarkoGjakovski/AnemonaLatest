@@ -5,6 +5,7 @@ import { Observable, of } from 'rxjs';
 import { BehaviorSubject } from 'rxjs';
 import { Product } from 'src/models/product';
 import { ProductService } from 'src/services/product.service';
+import { LoaderService } from 'src/shared/services/loader.service';
 
 @Component({
   selector: 'app-productlist',
@@ -13,13 +14,13 @@ import { ProductService } from 'src/services/product.service';
 })
 export class ProductListComponent implements OnInit, OnDestroy {
 
-  products: BehaviorSubject<Product[]> = new BehaviorSubject([new Product()]);
+  products: BehaviorSubject<Product[]> = new BehaviorSubject([]);
   bannerTitle: BehaviorSubject<string> = new BehaviorSubject("");
   numberOfPages: number = 1;
   pageNumber: number = 1;
   sub: Subscription = new Subscription();
 
-  constructor(private productService: ProductService, private activeRoute: ActivatedRoute) { 
+  constructor(private productService: ProductService, private activeRoute: ActivatedRoute, public loaderService: LoaderService) { 
     this.sub.add(
       this.activeRoute.queryParams.subscribe(newValue => {
         var editCasingTemp = newValue['c']
@@ -57,7 +58,15 @@ export class ProductListComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.products.next(this.productService.getProducts())
+    this.loaderService.display(true)
+    setTimeout(() => 
+    {
+      this.productService.getProducts().subscribe(newValue => {
+        this.products.next(newValue)
+        this.loaderService.display(false)
+      })
+    },
+    2500);
   }
 
 }
