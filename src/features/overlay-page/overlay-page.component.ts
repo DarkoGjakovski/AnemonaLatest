@@ -21,6 +21,11 @@ export class OverlayPageComponent implements OnInit {
     shareReplay(1),
   );
 
+  onDeactivate() {
+    // Alternatively, you can scroll to top by using this other call:
+    document.getElementsByTagName('mat-sidenav-content')[0].scrollTo(0, 0)
+  }
+
   constructor(private productService: ProductService, private changeDet: ChangeDetectorRef, private breakpointObserver: BreakpointObserver) { 
     this.productService.numberOfItemsInCart.subscribe(newValue => {
       this.numberOfItemsInCart.next(newValue)

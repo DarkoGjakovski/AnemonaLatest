@@ -98,7 +98,7 @@
 
     <div class="content" role="main">
 
-      <router-outlet></router-outlet>
+      <router-outlet (deactivate)="onDeactivate()"></router-outlet>
       <app-loader></app-loader>
       
       <footer>

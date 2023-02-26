@@ -3,6 +3,7 @@ import { BehaviorSubject } from 'rxjs';
 import { ProductService } from 'src/services/product.service';
 import { fadeAnimation } from './animations';
 import { MatSidenavContent } from '@angular/material/sidenav';
+import { NavigationEnd, Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -12,13 +13,15 @@ import { MatSidenavContent } from '@angular/material/sidenav';
 })
 export class AppComponent implements OnInit{
 
-  constructor(){
+  constructor(private router: Router){
     if(localStorage.getItem("cartItems")==null){
       localStorage.setItem("cartItems",JSON.stringify([]))
     }
+    
   }
 
   ngOnInit(): void {
+   
   }
 
 }

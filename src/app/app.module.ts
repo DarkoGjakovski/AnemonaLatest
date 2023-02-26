@@ -40,6 +40,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSortModule } from '@angular/material/sort';
+import { AboutUsComponent } from 'src/features/about-us/about-us.component';
 
 
 @NgModule({
@@ -56,7 +57,8 @@ import { MatSortModule } from '@angular/material/sort';
     FavoritesComponent,
     OverlayPageComponent,
     LoaderComponent,
-    ManageProductsPanelComponent
+    ManageProductsPanelComponent,
+    AboutUsComponent
   ],
   imports: [
     HttpClientModule,

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutUsComponent } from 'src/features/about-us/about-us.component';
 import { FavoritesComponent } from 'src/features/favorites/favorites.component';
 import { HomePageComponent } from 'src/features/home.page/home.page.component';
 import { ManageProductsPanelComponent } from 'src/features/manage-products-panel/manage-products-panel.component';
@@ -29,6 +30,9 @@ const routes: Routes = [
         path: 'favorites', component: FavoritesComponent
       },
       {
+        path: 'about-us', component: AboutUsComponent
+      },
+      {
         path: 'manage-products', component: ManageProductsPanelComponent
       }
     ]
@@ -41,7 +45,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes,{
-    scrollPositionRestoration: 'enabled',
+    scrollPositionRestoration: 'top',
   })],
   exports: [RouterModule]
 })

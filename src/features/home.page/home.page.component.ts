@@ -17,6 +17,10 @@ export class HomePageComponent implements OnInit {
     this.router.navigate(['products'],{queryParams: {c: "букети"}})
   }
 
+  onAboutUsClicked(){
+    this.router.navigate(['about-us'])
+  }
+
   go(){
     console.log('ebiseee')
   }
