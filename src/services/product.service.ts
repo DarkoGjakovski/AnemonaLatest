@@ -1,3 +1,4 @@
+import { HttpClient } from "@angular/common/http";
 import { EventEmitter, Injectable } from "@angular/core";
 import { MatSnackBar } from "@angular/material/snack-bar";
 import { BehaviorSubject, Observable, of } from "rxjs";
@@ -10,13 +11,15 @@ export class ProductService{
     numberOfItemsInCart = new BehaviorSubject<number>(0);
     numberOfFavoriteItems = new EventEmitter<string>();
 
+    refreshProducts = new EventEmitter<Product[]>();
+    isSearching$ = new BehaviorSubject<boolean>(false);
     
-    constructor(private snackBarService: MatSnackBar){
+    constructor(private snackBarService: MatSnackBar, private http: HttpClient){
 
     }
 
     products: Product[] = [
-        new Product(1,'assets/cactus.jpg','Кактус','Цвеќе со боцки в пустина',true,150),
+        new Product(1,'assets/cactus.jpg','Кактус','Цвеќе со боцки в пустина',true,50),
         new Product(2,'assets/ficus.jpg','Фикус','Фикусче',true,200),
         new Product(3,'assets/flower.jpg','Бонбончиња','Како шо не ми донесе Стефан',false,300),
         new Product(4,'assets/hibiskus.jpg','Хибискус','Не знам шо е то',true,100),

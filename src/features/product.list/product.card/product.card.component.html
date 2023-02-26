@@ -13,7 +13,7 @@
           <h5 class="mb-1">Залиха:</h5> <mat-icon *ngIf="product.available" [ngStyle]="{'color':'green'}" class="smallIcon mb-1">done</mat-icon> <mat-icon *ngIf="!product.available" [ngStyle]="{'color':'red'}" class="smallIcon mb-1">clear</mat-icon>
         </div>
         
-        <p class="card-text">{{product?.price}}ден.</p>
+        <p class="card-text">{{product?.price}} ден.</p>
       </div>
       <div class="card-buttons">
           <span title="Додадете во кошничка" [class.disabled]="!product.available" *ngIf="!isInCart.value" class="cart material-icons-outlined" (click)="addToCart()"  [ngStyle]="{'color':'rgb(107 84 168)'}">add_shopping_cart</span>

@@ -1,8 +1,17 @@
 <section class="home" id="home">
 
-    <div class="large-button" (click)="onBuyClicked()">
-        <button class="lg-bt-text">КУПУВАЈ</button>
-        <span class="arrow" style="font-size: large;padding: 5px;padding-left: 0px;margin-top: -3px;">&#8594;</span>
+    <div class="flexButtons">
+        <div class="large-button-2 mat-elevation-z8" (click)="onBuyClicked()">
+            <button class="lg-bt-text-2">ЗА НАС</button>
+            <!-- <span class="arrow" style="font-size: large;padding: 5px;padding-left: 0px;margin-top: -3px;">&#8594;</span> -->
+            <mat-icon>open_in_new</mat-icon>
+        </div> 
+
+        <div class="large-button mat-elevation-z8" (click)="onBuyClicked()">
+            <button class="lg-bt-text">ПРОДОЛЖИ КОН ПРОИЗВОДИ</button>
+            <!-- <span class="arrow" style="font-size: large;padding: 5px;padding-left: 0px;margin-top: -3px;">&#8594;</span> -->
+            <mat-icon>open_in_new</mat-icon>
+        </div> 
     </div>
 
 </section>
@@ -17,7 +26,7 @@
 
     <div class="grid" >
 
-        <div class="smallCard" (click)="go()">
+        <div class="smallCard" [routerLink]="'/products'" [queryParams]="{c: 'цвеќиња'}">
             <img src="../../assets/cvekina.png">
             <br>
             <div class="overlay">

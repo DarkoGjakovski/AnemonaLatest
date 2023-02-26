@@ -23,6 +23,15 @@ export class ProductListComponent implements OnInit, OnDestroy {
   constructor(private productService: ProductService, private activeRoute: ActivatedRoute, public loaderService: LoaderService) { 
     this.sub.add(
       this.activeRoute.queryParams.subscribe(newValue => {
+        this.loaderService.display(true)
+        setTimeout(() => 
+        {
+          this.productService.getProducts().subscribe(newValue => {
+            this.products.next(newValue)
+            this.loaderService.display(false)
+          })
+        },
+        1000);
         var editCasingTemp = newValue['c']
         editCasingTemp = editCasingTemp.substr(0,1).toUpperCase() + editCasingTemp.substr(1);
         this.bannerTitle.next(editCasingTemp)

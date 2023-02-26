@@ -26,10 +26,10 @@
 
   .toolbar {
     position: absolute;
-    top: 0;
+    top: 20;
     left: 0;
     right: 0;
-    height: 90px;
+    height: 100px;
     display: flex;
     width: fit-content;
     min-width: 100%;
@@ -43,6 +43,22 @@
     z-index: 9999;
     border-bottom: px solid #e4e4e4;
     overflow: hidden;
+    padding-inline:  30px;
+  }
+
+  .firstHeader{
+    background-color: rgb(107 84 168);
+    height: 22px;
+    display: flex;
+  }
+
+  .flexItem{
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+    font-size: 10px;
+    width: 100%;
+    margin-right: 15px;
   }
 
   mat-toolbar{
@@ -62,6 +78,29 @@
     display: flex; /* add */
     justify-content: center; /* add to align horizontal */
     align-items: center; /* add to align vertical */
+}
+
+#link1, #link2{
+  padding: 0px;
+  padding-inline: 5px;
+  color: white!important;
+}
+
+.cont{
+  padding-inline: 15px;
+  margin-right: 15px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  border-right: 2px ridge white;
+}
+
+.kontakt{
+  margin-top: -5px;
+}
+
+.zasledete{
+  margin-top: 1px;
+  margin-right: 10px;
 }
 
   mat-icon {
@@ -627,8 +666,9 @@ html, body {
     flex-direction: column;
     align-items: center;
     line-height: 20px;
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
     background-color: rgb(107 84 168);
+    height: 50px;
   }
 
   footer a {

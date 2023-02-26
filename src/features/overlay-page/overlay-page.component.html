@@ -39,6 +39,18 @@
   </mat-sidenav>
   <mat-sidenav-content #nav>
     <!--in here all the content must reside. We will add a navigation header as well-->
+    <div class="firstHeader">
+      <div class="flexItem">
+        <div class="cont">
+          <div class="kontakt">Контакт: 075 402 406</div>
+        </div>
+          <div class="zasledete">Заследете не:
+          <a id="link1" target="_blank"  href="https://www.instagram.com/cvekjara_anemona/" ><i class="fa fa-instagram" aria-hidden="true"></i></a>
+          <a id="link2" target="_blank" href="https://www.facebook.com/anemona.bitola"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+          </div>
+      </div>
+
+    </div>
     <div class="toolbar" role="banner">
 
       <div class="menubtn" *ngIf="(isHandset$ | async)">
@@ -72,7 +84,7 @@
           <mat-icon [routerLink]="'/shoppingcart'"  [ngStyle]="{'color':'rgb(107 84 168)'}">shopping_cart</mat-icon>
           <p class="cartNumber">{{numberOfItemsInCart.value}}</p>
           <mat-divider fxHide.lt-md vertical style="margin-top: 10px;padding: 10px;height: 10px;"></mat-divider>
-          <mat-icon  fxHide.lt-md class="material-icons-outlined" style="padding-left: 10px;" [routerLink]="'/favorites'"  [ngStyle]="{'color':'rgb(107 84 168)'}">favorites</mat-icon>
+          <mat-icon  fxHide.lt-md class="material-icons-outlined" style="padding-left: 10px; margin-right: 14px;" [routerLink]="'/favorites'"  [ngStyle]="{'color':'rgb(107 84 168)'}">favorites</mat-icon>
         </div>
           
     </div>
@@ -90,7 +102,7 @@
       <app-loader></app-loader>
       
       <footer>
-        <div class="social">
+        <!-- <div class="social">
           <a target="_blank"  href="https://www.instagram.com/cvekjara_anemona/" ><i class="fa fa-instagram" aria-hidden="true"></i></a>
           <a target="_blank" href="https://www.facebook.com/anemona.bitola"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
         </div>
@@ -100,8 +112,8 @@
             <li class="list-inline-item"><a href="#">About</a></li>
             <li class="list-inline-item"><a href="#">Terms</a></li>
             <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-        </ul>
-        <p class="copyright">Anemona © 2022</p>
+        </ul> -->
+        <p class="copyright">Anemona © 2023</p>
       </footer>
     </div>
 

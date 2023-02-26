@@ -1,15 +1,15 @@
 <div class="wrapper" [class.fill]="(loaderService.status | async)">
     <div class="row">
         <div class="col-lg-2">
-            <app-filtercard *ngIf="!loaderService.status.value"></app-filtercard>
+            <app-filtercard></app-filtercard>
         </div>
         <div class="col-lg-10">
-            <div class="grid">  
+            <div class="grid" *ngIf="!loaderService.status.value">  
                 <app-productCard *ngFor="let product of slicedList() | async" [product]="product"></app-productCard >
             </div>  
         </div>
     </div>
-     <div class="paginator">
+     <div class="paginator" *ngIf="!loaderService.status.value">
         <nav aria-label="...">
             <ul class="pagination justify-content-end">
                 <li *ngFor='let in of counter(numberOfPages) ;let i = index'>

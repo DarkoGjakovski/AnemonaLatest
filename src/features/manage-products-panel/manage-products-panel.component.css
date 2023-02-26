@@ -1,0 +1,224 @@
+
+
+.section-pagetop {
+    padding: 15px 0;
+    background-color: #f9f9f9;
+    margin-top: 20px;
+  }
+  
+  .container{
+    margin-top: 85px;
+    height: fit-content;
+    min-height: 100%;
+    margin-bottom: 50px;
+  }
+  
+  .flexBox{
+    display: flex;
+    flex-direction: row;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .flexBox{
+      display: flex;
+      flex-direction: column!important;
+    }
+  }
+  
+  .title{
+    color: #6b6f82;
+  }
+  
+  .emptyCard {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    vertical-align: middle;
+    min-height: 230px;
+    flex-direction: column;
+    padding: 2em;
+    background-color: white;
+    border-radius: 0.35rem;
+    box-shadow: 0 1px 15px 1px #3e396b12;
+    margin: 10px;
+  }
+  
+  .emptyCard > h1{
+    margin: auto;
+    color: #6b6f82;
+  }
+  
+  .summary-card {
+    display: flex;
+    min-height: 230px;
+    flex-direction: column;
+    padding: 2em;
+    background-color: white;
+    border-radius: 0.35rem;
+    box-shadow: 0 1px 15px 1px #3e396b12;
+    margin: 10px;
+    transition: transform 0.2s;
+  }
+  
+  .btn{
+    background-color: rgb(107 84 168);
+    color: white;
+    margin-left: auto;
+  }
+  
+  mat-slide-toggle{
+    padding-left: 20px;
+  }
+  
+  .center{
+    display: flex;
+    align-items: center;
+    margin:0px
+  }
+  
+  .flex-right{
+    margin-left: auto;
+    margin-bottom: 0px;
+  }
+  
+  .product-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .flexBox{
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      text-align: center;
+  }
+  
+  .profile-name{
+      padding-right: 50px;
+  }
+  
+  .text-muted{
+      color: #6b6f82;
+      margin-bottom: 0px;
+  }
+  
+  .profile-body {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-right: 20px;
+  }
+  
+  .qnumber{
+      text-align: center;
+      font-size: 30px;
+      padding: 10px;
+      padding-bottom: 0px;
+      display: flex;
+      align-items: center;
+  }
+  
+  .pnumber{
+    font-size: 27px;
+  }
+  
+  button{
+      background: none;
+      border: none;
+      color: rgb(107 84 168);
+      display: flex;
+      align-items: center;
+  }
+  
+  button:disabled{
+    color: rgb(175, 166, 200);
+  }
+  
+  .matIcon{
+    display: flex;
+    align-items: center;
+    color: rgb(107 84 168);
+    cursor: pointer;
+  }
+  
+  .profile-last{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .quantity{
+      display: flex;
+      flex-direction: row;
+  }
+  
+  @media (max-width: 750px) {
+    .client-card {
+      height: 100%;
+    }
+  }
+  
+  .profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 35px;
+  }
+  
+  .profile-name {
+    font-size: 2em;
+    line-height: 1.1;
+    letter-spacing: 1px;
+  }
+  
+  @media (min-width: 1000px) {
+    .client-card {
+      flex-direction: row;
+    }
+  }
+  
+  .col-my-8{
+    flex: 0 0 auto;
+    width: 66.66666667%;
+  }
+  
+  @media (max-width: 1000px) {
+    .col-my-4{
+      width: calc(100%)!important;
+      flex: 0 0 auto!important;
+    }
+  }
+  
+  .col-my-4{
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+  
+  .profile-country {
+    color: #6b6f82 !important;
+  }
+  
+  .profile-main{
+      display: flex;
+      align-items: center;
+  }
+  
+  .tableCard{
+    width: 100%;
+  }
+
+  table{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  mat-icon{
+    cursor: pointer;
+  }
+
+  mat-icon:hover{
+    color: rgb(107 84 168);;
+  }

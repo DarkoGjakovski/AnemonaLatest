@@ -35,6 +35,11 @@ import { OverlayPageComponent } from 'src/features/overlay-page/overlay-page.com
 import { LoaderService } from 'src/shared/services/loader.service';
 import { LoaderComponent } from 'src/shared/loader/loader.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { ManageProductsPanelComponent } from 'src/features/manage-products-panel/manage-products-panel.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
+import { HttpClientModule } from '@angular/common/http';
+import { MatSortModule } from '@angular/material/sort';
 
 
 @NgModule({
@@ -50,9 +55,11 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     ShoppingCartProductComponent,
     FavoritesComponent,
     OverlayPageComponent,
-    LoaderComponent
+    LoaderComponent,
+    ManageProductsPanelComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     NgxPaginationModule,
     AppRoutingModule,
@@ -72,7 +79,10 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatButtonModule,
     MatSidenavModule,
     MatTabsModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [ProductService, ShoppingCartService, LoaderService],
   bootstrap: [AppComponent]
